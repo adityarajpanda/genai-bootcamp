@@ -26,3 +26,7 @@ Monolithic V/S Microservice Architecture:
 Monolithic: Everything inside an application is binded into one single file. Like Business Logics, APIs, Authentication, Database Access. Example: app.py
 Microservices: Everything inside an application is divided into different different independent services. Like each service might have its own logic,
 	       own DBs, deployed independently and communicate via APIs. Example: user_service.py, orders.py
+
+Use the "pip show" command to check the version of the libraries you are using in your current project.
+For example:
+pip show fastapi, pip show uvicorn etc.
