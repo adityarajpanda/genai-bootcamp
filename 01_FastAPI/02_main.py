@@ -27,6 +27,13 @@ def people_search(name: str):
         if person["name"].lower() == name.lower():
             return {"person":person}
 
+@app.post("/add_people")
+def add_people_diff(person: dict):
+    people.append(person)
+    return {"message": "Person added successfully", "people": people}
+
+@app.post()
+
 # In  FastAPI, Uvicorn is the lightning-fast web server that actually runs your application. While FastAPI defines 
 # the routes, logic, and data validation, it does not have a built-in server to listen for network requests; 
 # it relies on Uvicorn to handle that low-level communication.

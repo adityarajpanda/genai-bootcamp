@@ -30,3 +30,19 @@ Microservices: Everything inside an application is divided into different differ
 Use the "pip show" command to check the version of the libraries you are using in your current project.
 For example:
 pip show fastapi, pip show uvicorn etc.
+
+Difference between GET and POST:
+
+GET:
+	1.) Used to fetch data; Data is sent via URL; Can be accessed directly in a browser.
+	2.) Example: https://api.example.com/users?id=10
+		Here:
+			id=10 is sent in the URL
+			You can paste this URL in a browser and hit Enter
+
+POST:
+	1.) Used to send data to server (create/update).
+	2.) Data is sent in the request body, not URL.
+	3.) Cannot be triggered just by typing a URL in browser.
+	4.) You cannot hit a POST API call through a URL like the GET API, you need to use POSTMAN or request libraty(python) for POST API call.
+	5.) The new entry you are sending through a post call is temporary, and to make the entry permanent, you need to get a persistent storage like a database.
