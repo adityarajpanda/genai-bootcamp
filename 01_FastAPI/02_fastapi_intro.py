@@ -65,7 +65,11 @@ query parameters, and response models.
 
 """
 Swagger UI:
-    FastAPI automatically generates interactive API documentation using Swagger UI. 
-    This allows developers to explore and test the API endpoints directly from the browser, 
-    making it easier to understand how the API works and what data it expects.
+    FastAPI automatically generates interactive API documentation using 
+    Swagger UI. This allows developers to explore and test the API endpoints 
+    directly from the browser, making it easier to understand how the API 
+    works and what data it expects.
+
+    We can access the Swagger UI documentation for our FastAPI application 
+    by navigating to http://localhost:8000/docs
 """
