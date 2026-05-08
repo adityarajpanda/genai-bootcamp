@@ -1,0 +1,35 @@
+1.) Write a Python function that takes a student ID as input and 
+retrieves the corresponding student record from the Neon DB database. 
+Expose this function as a GET API endpoint using FastAPI. Ensure proper 
+error handling and return appropriate HTTP status codes 
+(e.g., 404 if the student is not found).
+
+2.) Design a Pydantic model for representing course information, including 
+attributes like course ID (integer), course name (string), credits (integer), 
+and instructor (string). Create a FastAPI POST endpoint that accepts a list 
+of course objects conforming to this model and stores them in a JSON file. 
+Implement appropriate validation to ensure data integrity.
+
+3.) Implement a FastAPI DELETE endpoint that removes a student record from 
+the Neon DB database based on the student ID provided in the request. Ensure 
+that the API handles cases where the student ID does not exist in the 
+database and returns an appropriate error message.
+
+4.) Create a FastAPI PUT endpoint to update student information in the Neon 
+DB database. The endpoint should accept a student ID and a Pydantic model 
+containing the updated student data. Implement the logic to update the 
+corresponding record in the database. Consider how to handle partial updates 
+(i.e., only updating specific fields).
+
+5.) Develop a FastAPI application with two endpoints: one for generating text 
+using the URI API's GPT-5 mini model and another for generating images using 
+the image generation endpoint. Implement rate limiting to prevent abuse of 
+the API. Document your code and provide instructions on how to configure the 
+API key.
+
+6.) Research and compare the performance characteristics of FastAPI and 
+Flask for building APIs. Conduct benchmark tests to measure the request 
+processing time and resource utilization of both frameworks under different 
+load conditions. Analyze the results and provide a detailed report outlining 
+the strengths and weaknesses of each framework in the context of API 
+development.
