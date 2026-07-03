@@ -1,6 +1,6 @@
-Q.) What is motor, from motor.motor_asyncio import AsyncIOMotorClient, async, await, from bson import ObjectId ?
+## What is motor, from motor.motor_asyncio import AsyncIOMotorClient, async, await, from bson import ObjectId ?
 
-Ans.) 
+### Answer
 1.) Motor:
 - Motor is the official asynchronous Python driver for MongoDB.
 - If you were writing a standard, non-async Python script, you would use a library called PyMongo. 
@@ -39,8 +39,8 @@ string into the special format MongoDB expects.
 - async and await are built in Python keywords, hence, you do not require any additional library
 to install them.
 
-Q.) If they are built-in, why do we need libraries like FastAPI or Motor?
-Ans.)
+## If they are built-in, why do we need libraries like FastAPI or Motor?
+### Answer
 [ Python Language ]  ---> Provides the core engine ('async' and 'await' syntax)
           │
           ├──> [ FastAPI ]  ---> Uses that engine to handle incoming web traffic
@@ -49,16 +49,16 @@ Ans.)
           └──> [ Motor ]    ---> Uses that engine to talk to MongoDB over the
                                  network without freezing.
 
-Q.) Do we need to use them EVERY TIME we interact with a database?
-Ans.) Yes, if you are using an asynchronous web framework like FastAPI and an async driver like 
+## Do we need to use them EVERY TIME we interact with a database?
+### Answer
 Motor.
 Whenever your code has to leave your computer and travel across a wire (the network) to talk to a 
 database, it takes time. Even if it takes only 10 milliseconds, that is a lifetime to a computer. 
 If you don't use await, your entire server freezes for those 10 milliseconds, and no other users 
 can use your app during that window.
 
-Q.) Are there any exceptions where we skip async and await ?
-Ans.) You only skip async and await in two specific scenarios:
+## Are there any exceptions where we skip async and await ?
+### Answer
 (i) You are using a traditional synchronous setup: If you were using an older framework like Flask 
 paired with a traditional driver like PyMongo, you wouldn't use async/await at all because 
 Flask handles users by opening completely separate threads rather than using an event loop.
